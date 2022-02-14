@@ -44,7 +44,7 @@ def get_train(target_name, target, data="VL", nf=None):
 
     if data == "C":
         # blood data from V2 ---------------------------------------------------------------
-        blood_V2 = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
+        blood_V2 = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
                                        sheet_name='VetScan Data')
 
         # delete unneccessary columns with no relevant information
@@ -76,7 +76,7 @@ def get_train(target_name, target, data="VL", nf=None):
         df_blood_V2 = df_blood_V2.astype(float)
 
         # load cytokine data
-        cytokines_V2 = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx', sheet_name='Airway cytokines')
+        cytokines_V2 = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx', sheet_name='Airway cytokines')
         # clean_data
         df_cyto = cytokines_V2.copy()
         df_cyto = df_cyto.iloc[:, 2:]
@@ -105,7 +105,7 @@ def get_train(target_name, target, data="VL", nf=None):
         
     elif data == "LL":
         # blood data from V2 ---------------------------------------------------------------
-        blood_V2 = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
+        blood_V2 = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
                                        sheet_name='VetScan Data')
 
         # delete unneccessary columns with no relevant information
@@ -137,7 +137,7 @@ def get_train(target_name, target, data="VL", nf=None):
         df_blood_V2 = df_blood_V2.astype(float)
 
         # lung leukocyte data from V2
-        lung_leukocytes = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
+        lung_leukocytes = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
                                          sheet_name='Cleaned lung tissue leukocytes')
 
         lung_cells = lung_leukocytes[[target]]
@@ -149,7 +149,7 @@ def get_train(target_name, target, data="VL", nf=None):
         
     else:
         # blood data from V1 ---------------------------------------------------------------
-        blood_V1 = pd.read_excel('Experiment1_Vetscan_and_Viral_load_data.xlsx',
+        blood_V1 = pd.read_excel('../Data/Experiment1_Vetscan_and_Viral_load_data.xlsx',
                                        sheet_name='Vetscan Data')
         # get only relevant data columns
         df_blood_V1 = blood_V1.iloc[:, 2:23]
@@ -170,7 +170,7 @@ def get_train(target_name, target, data="VL", nf=None):
         df_blood_V1.columns =  name_blood
 
         # load viral load data from lungs
-        raw_vl_data = pd.read_excel('Experiment1_Vetscan_and_Viral_load_data.xlsx', sheet_name='Lung viral load')
+        raw_vl_data = pd.read_excel('../Data/Experiment1_Vetscan_and_Viral_load_data.xlsx', sheet_name='Lung viral load')
         df_vl_V1 = raw_vl_data.copy()
         # get only relevant data columns
         df_vl_V1 = raw_vl_data.iloc[:, 2:5]
@@ -216,7 +216,7 @@ def get_test(target_name, target, target_test=None, data="VL", nf=None):
     if data == "C":
         name_blood = ['Day', 'Leukocytes', 'Lymphocytes', 'Monocytes', 'Granulocytes', 'Erythrocytes',
               'Hemoglobin', 'Hematocrit', 'MCV', 'MCH', 'MCHC','RDWs', 'Platelets', 'MPV', 'PDWs']
-        df_V4 = pd.read_excel('Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx')
+        df_V4 = pd.read_excel('../Data/Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx')
         # drop unnecessary columns
         df_blood_V4 = df_V4.iloc[:, 0:16]
         df_blood_V4.drop("Experiment", axis=1, inplace=True)
@@ -233,7 +233,7 @@ def get_test(target_name, target, target_test=None, data="VL", nf=None):
         df_blood_V4.drop(5, inplace=True)
         df_blood_V4.reset_index(inplace=True, drop=True)
 
-        cytokines_V3_V4 = pd.read_excel('Experiment3_and_4_Cytokine_data.xlsx')
+        cytokines_V3_V4 = pd.read_excel('../Data/Experiment3_and_4_Cytokine_data.xlsx')
         df_cyto_eval = cytokines_V3_V4.iloc[:, 4:17]
         df_cyto_eval.drop(0, inplace=True)
         df_cyto_eval.reset_index(inplace=True, drop=True)
@@ -250,7 +250,7 @@ def get_test(target_name, target, target_test=None, data="VL", nf=None):
         df_eval.drop("Day", axis=1, inplace=True)
         df_eval[target_name] = df_cyto_eval[target]
     elif data == "LL":
-        df_V4 = pd.read_excel('Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx')
+        df_V4 = pd.read_excel('../Data/Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx')
         # drop unnecessary columns
         df_blood_V4 = df_V4.iloc[:, 0:16]
         df_blood_V4.drop("Experiment", axis=1, inplace=True)
@@ -268,7 +268,7 @@ def get_test(target_name, target, target_test=None, data="VL", nf=None):
         df_eval[target_name] = df_V4[target_test]
     else:
         # days of measurement
-        dayd = pd.read_excel('Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Raw Data")
+        dayd = pd.read_excel('../Data/Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Raw Data")
         df_day = dayd["Treatment"]
         df_day.replace("IAV d2", 2, inplace=True)
         df_day.replace("IAV d4", 4, inplace=True)
@@ -277,7 +277,7 @@ def get_test(target_name, target, target_test=None, data="VL", nf=None):
         df_day.replace("IAV d11", 11, inplace=True)
         
         # %% blood data from V3  -------------------------------------------------------------
-        blood_V3 = pd.read_excel('Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Cleaned Data")
+        blood_V3 = pd.read_excel('../Data/Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Cleaned Data")
         df_blood_V3 = blood_V3.copy()
         df_vl_V3 = df_blood_V3.pop('Viral load [NP copies/50ng RNA]')
         print("länge columns=", len(df_blood_V3.columns))
@@ -378,7 +378,7 @@ def plot_fig(y_pred, y_test, df_day, name="Viral Load/ (NP copies/50ng RNA)"):
     save_name = re.sub(r'[^\w]', '-', name)
     save_name = re.sub(r'-+', '-', save_name)
     save_name = re.sub(r' ', '_', save_name)
-    plt.savefig("Plots/Supplemental/"+save_name+"_Mapping_"+figname+".png", dpi=300, bbox_inches="tight")
+    plt.savefig("../Plots/Supplemental/"+save_name+"_Mapping_"+figname+".png", dpi=300, bbox_inches="tight")
     plt.close()
 
 
@@ -518,7 +518,7 @@ def fit_and_plot(target, target_name, target_test=None, method="GBRT", data="C",
         save_name = re.sub(r'[^\w]', '-', target_name)
         save_name = re.sub(r'-+', '-', save_name)
         save_name = re.sub(r' ', '_', save_name)  
-        plt.savefig("Plots/Supplemental/Feature_Importance_"+save_name+"_"+figname+".png", dpi=300, bbox_inches="tight")
+        plt.savefig("../Plots/Supplemental/Feature_Importance_"+save_name+"_"+figname+".png", dpi=300, bbox_inches="tight")
         plt.close()
 
 #### Uncomment the lung leukocyte or cytokine for which to plot the mapping ####

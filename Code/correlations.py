@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # %% load blood data (training data) ----------------------------------------------------------
-raw_blood_data = pd.read_excel('Experiment1_Vetscan_and_Viral_load_data.xlsx',
+raw_blood_data = pd.read_excel('../Data/Experiment1_Vetscan_and_Viral_load_data.xlsx',
                                sheet_name='Vetscan Data')
 # get only relevant data columns
 df = raw_blood_data.iloc[:, 2:23]
@@ -38,7 +38,7 @@ df.drop("RDWc (%)", axis=1, inplace=True)
 df = df.astype(float)
 
 # %% load data of viral load in lungs (training data)
-raw_vl_data = pd.read_excel('Experiment1_Vetscan_and_Viral_load_data.xlsx', sheet_name='Lung viral load')
+raw_vl_data = pd.read_excel('../Data/Experiment1_Vetscan_and_Viral_load_data.xlsx', sheet_name='Lung viral load')
 df1 = raw_vl_data
 # get only relevant data columns
 df1 = raw_vl_data.iloc[:, 2:5]
@@ -53,7 +53,7 @@ vl = df1.iloc[:, 1:2].reset_index(drop=True)
 df["Viral Load (NP copies/50ng RNA)"] = vl
 
 # %% load blood and viral load data (testing data) -------------------------------------------------------------
-raw_blood_data_test = pd.read_excel('Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Cleaned Data")
+raw_blood_data_test = pd.read_excel('../Data/Experiment3_Vetscan_and_Viral_load_data.xlsx', sheet_name="Cleaned Data")
 
 df2 = raw_blood_data_test
 df2 = df2[pd.notnull(df2["Viral load [NP copies/50ng RNA]"])]
@@ -101,7 +101,7 @@ for label in ax.get_yticklabels():
 for label in ax.get_xticklabels():
     if label.get_text() == "Viral Load":
         label.set_color("white")
-plt.savefig("Plots/Correlations/correlation_matrix_VL-Blood_V1_supp", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_VL-Blood_V1_supp", dpi=300, bbox_inches="tight")
 plt.close()
 
 # %% plot and save only selected correlations
@@ -123,11 +123,11 @@ for label in ax.get_yticklabels():
 for label in ax.get_xticklabels():
     if label.get_text() == "Viral Load":
         label.set_color("white")
-plt.savefig("Plots/Correlations/correlation_matrix_VL-Blood_V1_selected", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_VL-Blood_V1_selected", dpi=300, bbox_inches="tight")
 plt.close()
 
 # %% load hematological data from 2nd experiment (training data)
-raw_blood_data = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
+raw_blood_data = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
                                sheet_name='VetScan Data')
 
 # get range of relevant data columns
@@ -160,7 +160,7 @@ df.drop("Exp. Group", axis=1, inplace=True)
 df = df.astype(float)
 
 # %% load data of leukocytes from lung tissue (training data)
-raw_lung_data = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
+raw_lung_data = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx',
                               sheet_name='Cleaned lung tissue leukocytes')
 
 raw_lung_data.head()
@@ -185,7 +185,7 @@ names_without_units.append(r"CD4$^+$ T cells")
 names_without_units.append(r"CD8$^+$ T cells")
 
 # %% load hematological data and data of lung leukocytes (testing data)
-raw_V4 = pd.read_excel('Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx',
+raw_V4 = pd.read_excel('../Data/Experiment4_Vetscan_and_Lung_Leukocyte_data.xlsx',
                                sheet_name='Data')
 df_V4 = raw_V4.iloc[:, 2:]
 df_V4.columns = df_data_IC.columns
@@ -211,7 +211,7 @@ for label in ax.get_yticklabels():
 for label in ax.get_xticklabels():
     if label.get_text() == "CD8$^+$ T cells":
         label.set_color("white")
-plt.savefig("Plots/Correlations/correlation_matrix_Leuko-Blood_V2_V4_supp", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_Leuko-Blood_V2_V4_supp", dpi=300, bbox_inches="tight")
 plt.close()
 
 # %% plot and save selected correlations
@@ -235,7 +235,7 @@ for label in ax.get_yticklabels():
 for label in ax.get_xticklabels():
     if label.get_text() == "CD8$^+$ T cells":
         label.set_color("white")
-plt.savefig("Plots/Correlations/correlation_matrix_Leuko-Blood_V2_V4_selected", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_Leuko-Blood_V2_V4_selected", dpi=300, bbox_inches="tight")
 plt.close()
 
 # %% merge selected viral load and lung leukocyte correlations in one plot
@@ -286,11 +286,11 @@ for label in ax.get_xticklabels():
         label.set_color("white")
     if label.get_text() == "AMs" or label.get_text() == "Neutrophils" or label.get_text() == "NK cells" or label.get_text() == "CD4$^+$ T cells" or label.get_text() == "CD8$^+$ T cells":
         label.set_weight("bold")
-plt.savefig("Plots/Correlations/correlation_matrix_merged_V1-4", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_merged_V1-4", dpi=300, bbox_inches="tight")
 plt.close()
 
 # %% load lung cytokine data (training data) 
-data = pd.read_excel('Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx', sheet_name='Airway cytokines')
+data = pd.read_excel('../Data/Experiment2_Vetscan_Lung_Leukocyte_and_Cytokine_data.xlsx', sheet_name='Airway cytokines')
 df_cyto = data.iloc[:, 2:]
 df_cyto.drop(0, inplace=True)
 df_cyto.reset_index(inplace=True, drop=True)
@@ -305,7 +305,7 @@ df_cyto.columns = ['IL-23', r'IL-1$\alpha$', r'IFN-$\gamma$', r'TNF-$\alpha$', '
                    'IL-17A', r'IFN-$\beta$', 'GM-CSF']
 
 # %% load lung cytokine data (testing data) 
-cytokines_V3_V4 = pd.read_excel('Experiment3_and_4_Cytokine_data.xlsx')
+cytokines_V3_V4 = pd.read_excel('../Data/Experiment3_and_4_Cytokine_data.xlsx')
 df_cyto_eval = cytokines_V3_V4.iloc[:, 4:17]
 df_cyto_eval.drop(0, inplace=True)
 df_cyto_eval.reset_index(inplace=True, drop=True)
@@ -351,7 +351,7 @@ for label in ax.get_yticklabels():
 for label in ax.get_xticklabels():
     if label.get_text() == "GM-CSF":
         label.set_color("white")
-plt.savefig("Plots/Correlations/correlation_matrix_Cyto-Blood_V2-4", dpi=300, bbox_inches="tight")
+plt.savefig("../Plots/Correlations/correlation_matrix_Cyto-Blood_V2-4", dpi=300, bbox_inches="tight")
 plt.close()
 
 
