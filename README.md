@@ -1,6 +1,6 @@
 # Tracking_IAV_from_Blood
 
-The python code uses the version 3.7.7 and uses the following libraries:
+The python code uses the version 3.7.7 and the following libraries:
 
 - Tensorflow: 2.4.1
 - Sklearn:    0.24.2
