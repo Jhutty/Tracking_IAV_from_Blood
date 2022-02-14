@@ -1,0 +1,9 @@
+=== Neutrophils Mapping (LR with PCA, Testing, 08-02-22) ===
+ MSE:        0.9789671107751197
+ MAE:        0.8496267094936927
+ R2 score:   0.2519371006811346
+
+=== Neutrophils Mapping (Benchmark, 08-02-22) ===
+ MSE:        1.7876942254715222
+ MAE:        1.2081528271622244
+ R2 score:   -0.3660394825143576
