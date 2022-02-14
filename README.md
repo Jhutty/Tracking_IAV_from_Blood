@@ -24,7 +24,7 @@ The tracking of viral burden and host responses with minimal invasive methods du
 This repository contains the supplementalary simulation code for above paper.
 The respository is structured the following way:
 - Code: contains the python files to create results & figures
-- Data: contains data created produced by us
+- Data: contains data produced by us
 - Plots: contains figures from the paper and supplemental material
 - Results: contains text files with the results (selected metrices) from the execution of the python scripts 
 
