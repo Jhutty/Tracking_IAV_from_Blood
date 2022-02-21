@@ -30,7 +30,7 @@ The respository is structured the following way:
 
 To use the python files, please follow the instructions on top of the file (if any) or simply execute it.
 
-The python code uses the version 3.7.7 and the following libraries:
+The python code uses version 3.7.7 and following libraries:
 - Tensorflow: 2.4.1
 - Sklearn:    0.24.2
 - Numpy:      1.18.5
