@@ -393,12 +393,11 @@ result = []
 
 # calculate permutation importance for every model
 for mod in NN_mod_lst:
-     result.append(permutation_importance(mod, X_test, y_test, n_repeats=2, 
+     result.append(permutation_importance(mod, X_test, y_test, n_repeats=100, 
                                 scoring=make_scorer(mean_squared_error, greater_is_better=False),
                                 random_state=42, n_jobs=1))
     
 #%% calculate mean of permutation importance
- 
 res_importances_mean = np.mean([r.importances_mean for r in result], axis=0)
 res_importances = np.mean([r.importances for r in result], axis=0)
 sorted_idx = res_importances_mean.argsort()

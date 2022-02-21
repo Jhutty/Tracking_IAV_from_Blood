@@ -14,7 +14,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # name of the mapped lung parameter
-name = ["AMs", "CD4+ T", "CD8+ T", "IFN-b", "IFN-g", "IL-6", "NK", "Neutrophils", "TNF-a",
+name = ["AMs", r"CD4$^+$ T", r"CD8$^+$ T", r"IFN-$\beta$", r"IFN-$\gamma$", "IL-6", "NK", "Neutrophils", r"TNF-$\alpha$",
         "Viral Load"]
 
 # r2 scores for each parameter
