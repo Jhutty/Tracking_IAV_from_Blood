@@ -1,5 +1,5 @@
 # Tracking Influenza A Virus Infection in the Lung from Hematological Data with Machine Learning
-Suneet Singh Jhutty<sup>a,b,†</sup>, Julia D. Boehme<sup>c,d,†</sup>, Andreas Jeron<sup>c,d</sup>, Julia Volckmar<sup>c,d</sup>, Kristin Schultz<sup>c,e</sup>, Jens Schreiber<sup>f</sup>, Klaus Schughart<sup>e,g,h</sup>, Kai Zhou<sup>a</sup>, Jan Steinheimer<sup>a</sup>, Horst Stöcker<sup>a,i,j</sup>, Sabine Stegemann-Koniszewski<sup>f</sup>, Dunja Bruder<sup>d,c*</sup>, Esteban A. Hernandez-Vargas<sup>k,l,a*</sup>
+Suneet Singh Jhutty<sup>a,b,†</sup>, Julia D. Boehme<sup>c,d,†</sup>, Andreas Jeron<sup>c,d</sup>, Julia Volckmar<sup>c,d</sup>, Kristin Schultz<sup>c,e</sup>, Jens Schreiber<sup>f</sup>, Klaus Schughart<sup>e,g,h</sup>, Kai Zhou<sup>a</sup>, Jan Steinheimer<sup>a</sup>, Horst Stöcker<sup>a,i,j</sup>, Sabine Stegemann-Koniszewski<sup>f</sup>, Dunja Bruder<sup>d,c,*</sup>, Esteban A. Hernandez-Vargas<sup>k,l,a,*</sup>
   
     a) Frankfurt Institute for Advanced Studies, 60438, Frankfurt am Main, Germany
     b) Faculty of Biological Sciences, Goethe University, 60438 Frankfurt am Main, Germany
