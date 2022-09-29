@@ -1,20 +1,21 @@
 # Tracking Influenza A Virus Infection in the Lung from Hematological Data with Machine Learning
-Suneet Singh Jhutty<sup>1,2,#</sup>, Julia D. Boehme<sup>3,4,#</sup>, Andreas Jeron<sup>3,4</sup>, Julia Volckmar<sup>3,4</sup>, Kristin Schultz<sup>3,5</sup>, Jens Schreiber<sup>6</sup>, Klaus Schughart<sup>5,7,8</sup>, Kai Zhou<sup>1</sup>, Jan Steinheimer<sup>1</sup>, Horst Stöcker<sup>1,9,10</sup>, Sabine Stegemann-Koniszewski<sup>6</sup>, Dunja Bruder<sup>3,4*</sup>, Esteban A. Hernandez-Vargas<sup>1,11*</sup>
+Suneet Singh Jhutty<sup>a,b,†</sup>, Julia D. Boehme<sup>c,d,†</sup>, Andreas Jeron<sup>c,d</sup>, Julia Volckmar<sup>c,d</sup>, Kristin Schultz<sup>c,e</sup>, Jens Schreiber<sup>f</sup>, Klaus Schughart<sup>e,g,h</sup>, Kai Zhou<sup>a</sup>, Jan Steinheimer<sup>a</sup>, Horst Stöcker<sup>a,i,j</sup>, Sabine Stegemann-Koniszewski<sup>f</sup>, Dunja Bruder<sup>d,c*</sup>, Esteban A. Hernandez-Vargas<sup>k,l,a*</sup>
   
-    1) Frankfurt Institute for Advanced Studies, 60438, Frankfurt am Main, Germany
-    2) Faculty of Biological Sciences, Goethe University, 60438 Frankfurt am Main, Germany
-    3) Immune Regulation Group, Helmholtz Centre for Infection Research, 38124 Braunschweig, Germany
-    4) Infection Immunology Group, Institute of Medical Microbiology, Infection Control and Prevention, Health Campus Immunology, Infectiology and Inflammation,  Otto-von-Guericke-University Magdeburg, 39120 Magdeburg, Germany
-    5) Infection Genetics Group, Helmholtz Centre for Infection Research, 38124 Braunschweig, Germany
-    6) Department of Pneumology, Health Campus Immunology, Infectiology and Inflammation, Otto-von-Guericke University Magdeburg, 39120 Magdeburg, Germany
-    7) Department of Microbiology, Immunology, and Biochemistry, University of Tennessee Health Science Center, Memphis, TN 38163, United States
-    8) University of Veterinary Medicine Hannover, 30559 Hannover, Germany
-    9) Institut für Theoretische Physik, Goethe Universität Frankfurt, 60438 Frankfurt am Main, Germany
-    10) GSI Helmholtzzentrum für Schwerionenforschung GmbH, 64291 Darmstadt, Germany
-    11) Instituto de Matemáticas, Universidad Nacional Autónoma de México, 76230, Juriquilla, México
+    a) Frankfurt Institute for Advanced Studies, 60438, Frankfurt am Main, Germany
+    b) Faculty of Biological Sciences, Goethe University, 60438 Frankfurt am Main, Germany
+    c) Immune Regulation Group, Helmholtz Centre for Infection Research, 38124 Braunschweig, Germany
+    d) Infection Immunology Group, Institute of Medical Microbiology, Infection Control and Prevention, Health Campus Immunology, Infectiology and Inflammation,  Otto-von-Guericke-University Magdeburg, 39120 Magdeburg, Germany
+    e) Department of Infection Genetics, Helmholtz Centre for Infection Research, 38124 Braunschweig, Germany
+    f) Department of Pneumology, Health Campus Immunology, Infectiology and Inflammation, Otto-von-Guericke University Magdeburg, 39120 Magdeburg, Germany
+    g) Department of Microbiology, Immunology, and Biochemistry, University of Tennessee Health Science Center, Memphis, TN 38163, United States
+    h) University of Veterinary Medicine Hannover, 30559 Hannover, Germany
+    i) Institut für Theoretische Physik, Goethe Universität Frankfurt, 60438 Frankfurt am Main, Germany
+    j) GSI Helmholtzzentrum für Schwerionenforschung GmbH, 64291 Darmstadt, Germany
+    k) Department of Mathematics and Statistical Science, University of Idaho, Moscow, Idaho, 83844-1103,USA
+    l) Institute for Modeling Collaboration and Innovation, University of Idaho, Moscow, Idaho, 83844–1103, USA
 
     Contributions
-    # These authors contributed equally: Suneet Singh Jhutty, Julia D. Boehme
+    †  These authors contributed equally: Suneet Singh Jhutty, Julia D. Boehme
     *  These authors jointly supervised this work: Dunja Bruder, Esteban A. Hernandez-Vargas
 
 # Abstract
